@@ -161,7 +161,7 @@ export default function Contact() {
                         >
                             <button
                                 onClick={() => setShowSuccessModal(false)}
-                                className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors"
+                                className="absolute cursor-pointer top-4 right-4 text-gray-400 hover:text-white transition-colors"
                             >
                                 <X className="w-5 h-5" />
                             </button>
