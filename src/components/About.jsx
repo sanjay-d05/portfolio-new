@@ -16,14 +16,14 @@ const skills = [
         description: 'Creating robust APIs and server-side logic with Node.js, Express, and MongoDB.',
     },
     {
+        icon: <Code className="w-6 h-6 text-green-400" />,
+        title: 'Full Stack Development',
+        description: 'End-to-end application development combining frontend and backend expertise.',
+    },
+    {
         icon: <Smartphone className="w-6 h-6 text-pink-400" />,
         title: 'Mobile First',
         description: 'Ensuring seamless experiences across all devices and screen sizes.',
-    },
-    {
-        icon: <Code className="w-6 h-6 text-green-400" />,
-        title: 'Clean Code',
-        description: 'Writing maintainable, scalable, and efficient code following best practices.',
     },
 ];
 
@@ -38,7 +38,9 @@ export default function About() {
                     transition={{ duration: 0.5 }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">About Me</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">
+                        About <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">Me</span>
+                    </h2>
                     <p className="text-gray-400 max-w-2xl mx-auto">
                         Passionate about technology and design, I create solutions that solve real-world problems.
                         Here's a glimpse into what I do.

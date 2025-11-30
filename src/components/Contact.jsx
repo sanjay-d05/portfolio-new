@@ -60,7 +60,9 @@ export default function Contact() {
                     transition={{ duration: 0.5 }}
                     className="max-w-2xl mx-auto text-center mb-12"
                 >
-                    <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">Get in Touch</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">
+                        Get in <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">Touch</span>
+                    </h2>
                     <p className="text-gray-400">
                         Have a project in mind or just want to say hi? I'd love to hear from you.
                     </p>

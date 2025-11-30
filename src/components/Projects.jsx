@@ -102,6 +102,7 @@ export default function Projects() {
                     </p>
                 </motion.div>
 
+                {/* Projects Grid */}
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"
@@ -115,88 +116,97 @@ export default function Projects() {
                             variants={cardVariants}
                             className="group relative h-full"
                         >
-                            <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-75 transition duration-500 blur-lg group-hover:blur-xl" />
-
-                            <div className="relative h-full bg-gray-900 rounded-2xl overflow-hidden border border-white/10 flex flex-col">
-                                {/* Image Container */}
-                                <div className="relative aspect-[4/3] overflow-hidden">
-                                    <img
-                                        src={project.imageUrl}
-                                        alt={project.title}
-                                        className="object-cover w-full h-full transform group-hover:scale-110 transition-transform duration-700 ease-out"
-                                    />
-                                    {/* Hover overlay for desktop only */}
-                                    <div className="hidden lg:flex absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 items-center justify-center gap-4 backdrop-blur-sm">
-                                        <a
-                                            href={project.githubUrl}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="p-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white hover:bg-white hover:text-black transition-all duration-300 transform hover:scale-110"
-                                            title="View Code"
-                                        >
-                                            <Github className="w-6 h-6" />
-                                        </a>
-                                        <a
-                                            href={project.demoUrl}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="p-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white hover:bg-white hover:text-black transition-all duration-300 transform hover:scale-110"
-                                            title="View Demo"
-                                        >
-                                            <ExternalLink className="w-6 h-6" />
-                                        </a>
-                                    </div>
-                                </div>
-
-                                {/* Content */}
-                                <div className="p-6 flex flex-col flex-grow bg-gradient-to-b from-gray-900 to-black">
-                                    <div className="flex justify-between items-start mb-4">
-                                        <h3 className="text-xl font-bold font-display group-hover:text-purple-400 transition-colors duration-300">
-                                            {project.title}
-                                        </h3>
-                                        <ArrowUpRight className="w-5 h-5 text-gray-500 group-hover:text-purple-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
-                                    </div>
-
-                                    <p className="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">
-                                        {project.description}
-                                    </p>
-
-                                    <div className="flex flex-wrap gap-2 mb-4">
-                                        {project.tags.map((tag) => (
-                                            <span
-                                                key={tag}
-                                                className="px-3 py-1 text-xs font-medium bg-white/5 text-gray-300 rounded-full border border-white/5 group-hover:border-purple-500/30 transition-colors duration-300"
-                                            >
-                                                {tag}
-                                            </span>
-                                        ))}
-                                    </div>
-
-                                    {/* Buttons for mobile/tablet (below lg) */}
-                                    <div className="flex gap-3 lg:hidden">
-                                        <a
-                                            href={project.githubUrl}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-lg border border-purple-500/50 text-white hover:bg-purple-900/30 transition-colors text-sm font-medium"
-                                        >
-                                            <Github className="w-4 h-4" /> GitHub
-                                        </a>
-                                        <a
-                                            href={project.demoUrl}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-lg border border-purple-500/50 text-white hover:bg-purple-900/30 transition-colors text-sm font-medium"
-                                        >
-                                            <ExternalLink className="w-4 h-4" /> Demo
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                            <ProjectCard project={project} />
                         </motion.div>
                     ))}
                 </motion.div>
             </div>
         </section>
+    );
+}
+
+// Extracted ProjectCard component for reusability
+function ProjectCard({ project }) {
+    return (
+        <>
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-75 transition duration-500 blur-lg group-hover:blur-xl" />
+
+            <div className="relative h-auto md:h-full bg-gray-900 rounded-2xl overflow-hidden border border-white/10 flex flex-col">
+                {/* Image Container */}
+                <div className="relative aspect-video md:aspect-[4/3] overflow-hidden">
+                    <img
+                        src={project.imageUrl}
+                        alt={project.title}
+                        className="object-cover w-full h-full transform group-hover:scale-110 transition-transform duration-700 ease-out"
+                    />
+                    {/* Hover overlay for desktop only */}
+                    <div className="hidden lg:flex absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 items-center justify-center gap-4 backdrop-blur-sm">
+                        <a
+                            href={project.githubUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="p-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white hover:bg-white hover:text-black transition-all duration-300 transform hover:scale-110"
+                            title="View Code"
+                        >
+                            <Github className="w-6 h-6" />
+                        </a>
+                        <a
+                            href={project.demoUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="p-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white hover:bg-white hover:text-black transition-all duration-300 transform hover:scale-110"
+                            title="View Demo"
+                        >
+                            <ExternalLink className="w-6 h-6" />
+                        </a>
+                    </div>
+                </div>
+
+                {/* Content */}
+                <div className="p-4 md:p-6 flex flex-col flex-grow bg-gradient-to-b from-gray-900 to-black">
+                    <div className="flex justify-between items-start mb-4">
+                        <h3 className="text-xl font-bold font-display group-hover:text-purple-400 transition-colors duration-300">
+                            {project.title}
+                        </h3>
+                        <ArrowUpRight className="w-5 h-5 text-gray-500 group-hover:text-purple-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
+                    </div>
+
+                    <p className="text-gray-400 text-sm leading-relaxed mb-6 flex-grow">
+                        {project.description}
+                    </p>
+
+                    <div className="flex flex-wrap gap-2 mb-6">
+                        {project.tags.map((tag) => (
+                            <span
+                                key={tag}
+                                className="px-3 py-1 text-xs font-medium bg-white/5 text-gray-300 rounded-full border border-white/5 group-hover:border-purple-500/30 transition-colors duration-300"
+                            >
+                                {tag}
+                            </span>
+                        ))}
+                    </div>
+
+                    {/* Buttons for mobile/tablet (below lg) */}
+                    <div className="flex gap-3 lg:hidden mt-auto">
+                        <a
+                            href={project.githubUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-lg border border-purple-500/50 text-white hover:bg-purple-900/30 transition-colors text-sm font-medium"
+                        >
+                            <Github className="w-4 h-4" /> GitHub
+                        </a>
+                        <a
+                            href={project.demoUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-lg border border-purple-500/50 text-white hover:bg-purple-900/30 transition-colors text-sm font-medium"
+                        >
+                            <ExternalLink className="w-4 h-4" /> Demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </>
     );
 }

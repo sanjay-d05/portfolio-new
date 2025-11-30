@@ -26,7 +26,7 @@ export default function Introduction() {
                     >
                         <div className="text-center mb-16">
                             <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">
-                                Let Me <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600">Introduce</span> Myself
+                                Let Me <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">Introduce</span> Myself
                             </h2>
                             <p className="text-gray-400 max-w-2xl mx-auto">
                                 A passionate junior developer eager to learn and grow in the tech industry.

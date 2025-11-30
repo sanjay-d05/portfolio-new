@@ -20,7 +20,7 @@ const Button = forwardRef(({ className, variant = 'primary', size = 'md', ...pro
         <button
             ref={ref}
             className={twMerge(
-                'inline-flex items-center justify-center rounded-full font-medium transition-all duration-300 active:scale-95 disabled:opacity-50 disabled:pointer-events-none',
+                'inline-flex items-center justify-center rounded-full font-medium transition-all duration-300 active:scale-95 disabled:opacity-50 disabled:pointer-events-none cursor-pointer',
                 variants[variant],
                 sizes[size],
                 className
