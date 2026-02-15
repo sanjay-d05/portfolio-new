@@ -67,7 +67,7 @@ const cardVariants = {
 export default function Blog() {
     return (
         <section id="blog" className="py-24 bg-black/50 relative overflow-hidden">
-            {/* Background Gradients */}
+            {/* Background Gradient */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
                 <div className="absolute top-1/4 -left-64 w-96 h-96 bg-blue-600/10 rounded-full blur-[128px]" />
                 <div className="absolute bottom-1/4 -right-64 w-96 h-96 bg-purple-600/10 rounded-full blur-[128px]" />
