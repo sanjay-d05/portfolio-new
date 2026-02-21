@@ -5,7 +5,7 @@ import TechStack from '@/components/TechStack';
 import Projects from '@/components/Projects';
 import Blog from '@/components/Blog';
 import Contact from '@/components/Contact';
-import Dummy from '@/components/Dummy';
+// import Dummy from '@/components/Dummy';
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
       <Projects />
       <Blog />
       <Contact />
-      <Dummy />
+      {/* <Dummy /> */}
     </main>
   );
 }
