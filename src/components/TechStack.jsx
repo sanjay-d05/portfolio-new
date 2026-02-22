@@ -12,7 +12,6 @@ import {
     DiMysql,
     DiPhp,
     DiPython,
-    DiGit,
     DiJava
 } from 'react-icons/di';
 import {
@@ -20,7 +19,6 @@ import {
     SiNextdotjs,
     SiExpress,
     SiCplusplus,
-    SiFirebase,
     SiTypescript,
     SiNestjs
 } from 'react-icons/si';
@@ -116,16 +114,6 @@ const techStack = [
         icon: <DiJava className="w-12 h-12" />,
         title: 'Java',
         color: 'text-red-500'
-    },
-    {
-        icon: <DiGit className="w-12 h-12" />,
-        title: 'Git',
-        color: 'text-orange-600'
-    },
-    {
-        icon: <SiFirebase className="w-12 h-12" />,
-        title: 'Firebase',
-        color: 'text-amber-500'
     }
 ];
 

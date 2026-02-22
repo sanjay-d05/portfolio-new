@@ -2,6 +2,7 @@ import Hero from '@/components/Hero';
 import Introduction from '@/components/Introduction';
 import About from '@/components/About';
 import TechStack from '@/components/TechStack';
+import ToolStack from '@/components/ToolStack';
 import Projects from '@/components/Projects';
 import Blog from '@/components/Blog';
 import Contact from '@/components/Contact';
@@ -14,6 +15,7 @@ export default function Home() {
       <Introduction />
       <About />
       <TechStack />
+      <ToolStack />
       <Projects />
       <Blog />
       <Contact />
