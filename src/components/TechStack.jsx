@@ -20,8 +20,11 @@ import {
     SiNextdotjs,
     SiExpress,
     SiCplusplus,
-    SiFirebase
+    SiFirebase,
+    SiTypescript,
+    SiNestjs
 } from 'react-icons/si';
+import { TbBrandReactNative } from "react-icons/tb";
 
 const techStack = [
     {
@@ -40,8 +43,18 @@ const techStack = [
         color: 'text-yellow-400'
     },
     {
+        icon: <SiTypescript className="w-12 h-12" />,
+        title: 'TypeScript',
+        color: 'text-blue-400'
+    },
+    {
         icon: <DiReact className="w-12 h-12" />,
         title: 'React JS',
+        color: 'text-cyan-400'
+    },
+    {
+        icon: <TbBrandReactNative className="w-12 h-12" />,
+        title: 'React Native',
         color: 'text-cyan-400'
     },
     {
@@ -67,6 +80,11 @@ const techStack = [
     {
         icon: <SiExpress className="w-12 h-12" />,
         title: 'Express.js',
+        color: 'text-gray-400'
+    },
+    {
+        icon: <SiNestjs className="w-12 h-12" />,
+        title: 'Nest.js',
         color: 'text-gray-400'
     },
     {

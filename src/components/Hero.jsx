@@ -55,7 +55,7 @@ export default function Hero() {
                         View Projects
                         <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Button>
-                    <a href="/Sanjay_D_Resume.pdf" download="Sanjay_D_Resume.pdf" className="cursor-pointer">
+                    <a href="/SANJAY_D_RESUME.pdf" download="SANJAY_D_RESUME.pdf" className="cursor-pointer">
                         <Button variant="secondary" size="lg">
                             Download CV
                             <Download className="w-4 h-4 ml-2" />
